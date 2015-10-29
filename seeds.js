@@ -99,16 +99,16 @@ Promise.all([
         ])
     }),
 
-    wsContract.remove().then(function(){
+    ubContract.remove().then(function(){
         return Promise.all([
-            wsContract.insert({colonyId: lanisters, unibear_id: lansell, duration: 1, honeypots: 10}),
-            wsContract.insert({colonyId: lanisters, unibear_id: cersei, duration: 1, honeypots: 600}),
-            wsContract.insert({colonyId: tyrells, unibear_id: mace, duration: 1, honeypots: 300}),
-            wsContract.insert({colonyId: tyrells, unibear_id: loras, duration: 1, honeypots: 200}),
-            wsContract.insert({colonyId: starks, unibear_id: bran, duration: 1, honeypots: 100}),
-            wsContract.insert({colonyId: starks, unibear_id: hodor, duration: 1, honeypots: 200}),
-            wsContract.insert({colonyId: targaryens, unibear_id: jorah, duration: 1, honeypots: 360}),
-            wsContract.insert({colonyId: targaryens, unibear_id: dario, duration: 1, honeypots: 800})
+            ubContract.insert({colonyId: lanisters, unibear_id: lansell, duration: 1, honeypots: 10}),
+            ubContract.insert({colonyId: lanisters, unibear_id: cersei, duration: 1, honeypots: 600}),
+            ubContract.insert({colonyId: tyrells, unibear_id: mace, duration: 1, honeypots: 300}),
+            ubContract.insert({colonyId: tyrells, unibear_id: loras, duration: 1, honeypots: 200}),
+            ubContract.insert({colonyId: starks, unibear_id: bran, duration: 1, honeypots: 100}),
+            ubContract.insert({colonyId: starks, unibear_id: hodor, duration: 1, honeypots: 200}),
+            ubContract.insert({colonyId: targaryens, unibear_id: jorah, duration: 1, honeypots: 360}),
+            ubContract.insert({colonyId: targaryens, unibear_id: dario, duration: 1, honeypots: 800})
         ])
     }),
 
