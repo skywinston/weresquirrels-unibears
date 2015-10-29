@@ -30,7 +30,7 @@ var tywin = weresquirrels.id(),
 
 // Seed the UNIBEARS
     // lanisters
-var lansell = unibears.id(),
+var jaime = unibears.id(),
     cersei = unibears.id(),
     // tyrells
     mace = unibears.id(),
@@ -75,7 +75,7 @@ Promise.all([
 
     unibears.remove().then(function(){
         return Promise.all([
-            unibears.insert({_id: lansell, name:'Lansell'}),
+            unibears.insert({_id: jaime, name:'Jaime'}),
             unibears.insert({_id: cersei, name: 'Cersei'}),
             unibears.insert({_id: mace, name: 'Mace'}),
             unibears.insert({_id: loras, name:'Loras'}),
@@ -101,7 +101,7 @@ Promise.all([
 
     ubContract.remove().then(function(){
         return Promise.all([
-            ubContract.insert({colonyId: lanisters, unibear_id: lansell, duration: 1, honeypots: 10}),
+            ubContract.insert({colonyId: lanisters, unibear_id: jaime, duration: 1, honeypots: 10}),
             ubContract.insert({colonyId: lanisters, unibear_id: cersei, duration: 1, honeypots: 600}),
             ubContract.insert({colonyId: tyrells, unibear_id: mace, duration: 1, honeypots: 300}),
             ubContract.insert({colonyId: tyrells, unibear_id: loras, duration: 1, honeypots: 200}),
@@ -125,30 +125,30 @@ Promise.all([
 
     wsStats.remove().then(function(){
         return Promise.all([
-            wsStats.insert({weresquirrelId: tywin, duelId: lanVtyr, meat: 55, garlic: 30}),
-            wsStats.insert({weresquirrelId: tyrion, duelId: lanVtyr, meat: 0, garlic: 100}),
-            wsStats.insert({weresquirrelId: olenna, duelId: lanVtyr, meat: 60, garlic: 10}),
-            wsStats.insert({weresquirrelId: tyrion, duelId: lanVtyr, meat: 30, garlic: 20}),
-            wsStats.insert({weresquirrelId: tywin, duelId: lanVsta, meat: 60, garlic: 30}),
-            wsStats.insert({weresquirrelId: tyrion, duelId: lanVsta, meat: 20, garlic: 80}),
-            wsStats.insert({weresquirrelId: sansa, duelId: lanVsta, meat: 10, garlic: 10}),
-            wsStats.insert({weresquirrelId: arya, duelId: lanVsta, meat: 70, garlic: 0}),
-            wsStats.insert({weresquirrelId: tywin, duelId: lanVtarg, meat: 50, garlic: 10}),
-            wsStats.insert({weresquirrelId: tyrion, duelId: lanVtarg, meat: 80, garlic: 40}),
-            wsStats.insert({weresquirrelId: dani, duelId: lanVtarg, meat: 100, garlic: 70}),
-            wsStats.insert({weresquirrelId: jon, duelId: lanVtarg, meat: 50, garlic: 50}),
-            wsStats.insert({weresquirrelId: olenna, duelId: tyrVtarg, meat: 60, garlic: 10}),
-            wsStats.insert({weresquirrelId: margaery, duelId: tyrVtarg, meat: 40, garlic: 20}),
-            wsStats.insert({weresquirrelId: dani, duelId: tyrVtarg, meat: 100, garlic: 80}),
-            wsStats.insert({weresquirrelId: jon, duelId: tyrVtarg, meat: 60, garlic: 40}),
-            wsStats.insert({weresquirrelId: olenna, duelId: tyrVsta, meat: 20, garlic: 50}),
-            wsStats.insert({weresquirrelId: margaery, duelId: tyrVsta, meat: 50, garlic: 50}),
-            wsStats.insert({weresquirrelId: sansa, duelId: tyrVsta, meat: 20, garlic: 30}),
-            wsStats.insert({weresquirrelId: arya, duelId: tyrVsta, meat: 30, garlic: 40}),
-            wsStats.insert({weresquirrelId: dani, duelId: staVtarg, meat: 100, garlic: 100}),
-            wsStats.insert({weresquirrelId: jon, duelId: staVtarg, meat: 0, garlic: 0}),
-            wsStats.insert({weresquirrelId: sansa, duelId: staVtarg, meat: 0, garlic: 0}),
-            wsStats.insert({weresquirrelId: arya, duelId: staVtarg, meat: 20, garlic: 50})
+            wsStats.insert({weresquirrel_id: tywin, duelId: lanVtyr, meat: 55, garlic: 30}),
+            wsStats.insert({weresquirrel_id: tyrion, duelId: lanVtyr, meat: 0, garlic: 100}),
+            wsStats.insert({weresquirrel_id: olenna, duelId: lanVtyr, meat: 60, garlic: 10}),
+            wsStats.insert({weresquirrel_id: tyrion, duelId: lanVtyr, meat: 30, garlic: 20}),
+            wsStats.insert({weresquirrel_id: tywin, duelId: lanVsta, meat: 60, garlic: 30}),
+            wsStats.insert({weresquirrel_id: tyrion, duelId: lanVsta, meat: 20, garlic: 80}),
+            wsStats.insert({weresquirrel_id: sansa, duelId: lanVsta, meat: 10, garlic: 10}),
+            wsStats.insert({weresquirrel_id: arya, duelId: lanVsta, meat: 70, garlic: 0}),
+            wsStats.insert({weresquirrel_id: tywin, duelId: lanVtarg, meat: 50, garlic: 10}),
+            wsStats.insert({weresquirrel_id: tyrion, duelId: lanVtarg, meat: 80, garlic: 40}),
+            wsStats.insert({weresquirrel_id: dani, duelId: lanVtarg, meat: 100, garlic: 70}),
+            wsStats.insert({weresquirrel_id: jon, duelId: lanVtarg, meat: 50, garlic: 50}),
+            wsStats.insert({weresquirrel_id: olenna, duelId: tyrVtarg, meat: 60, garlic: 10}),
+            wsStats.insert({weresquirrel_id: margaery, duelId: tyrVtarg, meat: 40, garlic: 20}),
+            wsStats.insert({weresquirrel_id: dani, duelId: tyrVtarg, meat: 100, garlic: 80}),
+            wsStats.insert({weresquirrel_id: jon, duelId: tyrVtarg, meat: 60, garlic: 40}),
+            wsStats.insert({weresquirrel_id: olenna, duelId: tyrVsta, meat: 20, garlic: 50}),
+            wsStats.insert({weresquirrel_id: margaery, duelId: tyrVsta, meat: 50, garlic: 50}),
+            wsStats.insert({weresquirrel_id: sansa, duelId: tyrVsta, meat: 20, garlic: 30}),
+            wsStats.insert({weresquirrel_id: arya, duelId: tyrVsta, meat: 30, garlic: 40}),
+            wsStats.insert({weresquirrel_id: dani, duelId: staVtarg, meat: 100, garlic: 100}),
+            wsStats.insert({weresquirrel_id: jon, duelId: staVtarg, meat: 0, garlic: 0}),
+            wsStats.insert({weresquirrel_id: sansa, duelId: staVtarg, meat: 0, garlic: 0}),
+            wsStats.insert({weresquirrel_id: arya, duelId: staVtarg, meat: 20, garlic: 50})
         ])
     })
 ]).then(function(){

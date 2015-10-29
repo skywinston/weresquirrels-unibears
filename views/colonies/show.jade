@@ -1,0 +1,22 @@
+extends ../layout
+
+block content
+  h1 Unibears
+  for unibear in unibears
+    p= unibear.name
+  br
+  hr
+  h1 Weresquirrels
+  for squirrel in weresquirrels
+    h3.page-header= squirrel.name
+    table.table.table-striped
+      thead
+        tr
+          th Meat
+          th Garlic
+      tbody
+        for duel in squirrel.duels
+          tr
+            td= duel.meat
+            td= duel.garlic
+  
