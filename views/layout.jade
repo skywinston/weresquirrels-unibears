@@ -16,13 +16,21 @@ html(lang="en")
           span.icon-bar
           span.icon-bar
         a.navbar-brand(href='../') Weresquirrel Championchips
-      ul.nav.navbar-right.navbar-nav
-        li
-          a(href='/') Colonies
-        li
-          a(href='/weresquirrels' style="margin-right: 20px") Weresquirrels
+      nav.collapse.navbar-collapse.pull-right
+        ul.nav.navbar-nav
+          li
+            a(href='/') Colonies
+          li
+            a(href='/weresquirrels') Weresquirrels
+        form.navbar-form.navbar-right(action='/duel' method='GET')
+          .form-group
+            button.btn.btn-default(type='submit' value="New Duel" style="margin-right: 20px") New Duel
+
+          
     .container
       block content
       script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js")
       script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js")
+      script(src="/javascripts/clientside.js")
+      
       
