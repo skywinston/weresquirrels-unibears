@@ -1,0 +1,20 @@
+extends ../layout
+
+block content
+  .col-md-6.col-md-offset-3
+    h1.page-header Weresquirrels
+    table.table.table-striped
+      thead
+        tr
+          th Name
+          th Colony
+          th Meat Gathered
+          th Garlic Gathered
+      tbody
+        for weresquirrel in weresquirrels
+          tr
+            td= weresquirrel.name
+            td= weresquirrel.colony
+            td= weresquirrel.meat
+            td= weresquirrel.garlic
+    
