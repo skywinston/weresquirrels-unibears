@@ -37,8 +37,8 @@ router.get('/', function(req, res){
       return wsStats.find({weresquirrel_id: s._id});
     });
     return Promise.all(promises);
-  }).then(function(allStats){
-    console.log(contracts);
+  })
+  .then(function(allStats){
     weresquirrels.forEach(function(s){
       s['meat'] = 0;
       s['garlic'] = 0;
@@ -51,9 +51,19 @@ router.get('/', function(req, res){
       })
     });
 
+    weresquirrels.forEach(function(weresquirrel){
+      contracts.forEach(function(contract){
+        if(contract[0].weresquirrel_id == weresquirrel._id.toString()){
+          colonies.forEach(function(colony){
+            if(colony._id.toString() == contract[0].colonyId){
+              weresquirrel.colony = colony.name;
+            }
+          });
+        }
+      });
+    });
 
-
-    console.log(weresquirrels);
+    res.render('weresquirrels/index', {weresquirrels: weresquirrels});
   });
 })
 
