@@ -1,0 +1,19 @@
+extends ../layout
+
+block content
+  .col-md-8.col-md-offset-2
+    h1.pageheader Weresquirrel Colonies 2015
+    table.table.table-striped
+      thead
+        tr
+          th Colony
+          th Wins
+      tbody
+        for colony in colonies 
+          tr
+            td
+              a(href='/colonies/#{colony.id}')= colony.name
+            td= colony.wins
+          
+          
+  
